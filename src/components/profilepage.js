@@ -63,7 +63,7 @@ const ProfilePage = () => {
 
           {/* LinkedIn Icon */}
           <IconButton
-            href="https://www.linkedin.com/in/your-linkedin-profile"
+            href="https://www.linkedin.com/in/shrajan-v-8b4171251/"
             target="_blank"
             rel="noopener noreferrer"
             color="primary"
