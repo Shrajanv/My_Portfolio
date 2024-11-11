@@ -11,7 +11,7 @@ const EducationPage = () => {
       institution: 'St Joseph Engineering College, Vamanjoor, Mangaluru',
     },
     {
-      level: 'UG in BSc (Statistics, Computer Science,Mathematics)',
+      level: 'UG in BSc (Statistics, Computer Science, Mathematics)',
       marks: '7.5 CGPA/10',
       year: '2022',
       institution: 'St Aloysius College, Mangaluru',
@@ -35,7 +35,7 @@ const EducationPage = () => {
   };
 
   return (
-    <Container sx={{ paddingTop: 8, paddingBottom: 5 }}>
+    <Container maxWidth="md" sx={{ paddingTop: 8, paddingBottom: 5, paddingX: { xs: 2, sm: 3 } }}>
       {/* Back button */}
       <IconButton onClick={handleBackClick} sx={{ position: 'absolute', top: 20, left: 20, color: 'white' }}>
         <ArrowBackIcon />
@@ -43,7 +43,7 @@ const EducationPage = () => {
 
       {/* Page Title */}
       <Typography
-        variant="h2"
+        variant="h4"
         gutterBottom
         textAlign="center"
         sx={{
@@ -51,6 +51,7 @@ const EducationPage = () => {
           color: 'white',
           fontWeight: 'bold',
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',
+          fontSize: { xs: '1.8rem', sm: '2.5rem' }, // Adjust font size for smaller screens
         }}
       >
         My Educations
@@ -64,10 +65,11 @@ const EducationPage = () => {
             component={Paper}
             elevation={3}
             sx={{
-              padding: 3,
+              padding: { xs: 2, sm: 3 },
               marginBottom: 4,
               backgroundColor: '#e8f5e9',
               borderRadius: '10px',
+              width: '100%',
               '&:hover': {
                 transform: 'scale(1.02)',
                 boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.2)',
@@ -75,16 +77,16 @@ const EducationPage = () => {
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
             }}
           >
-            <Typography variant="h5" fontWeight="bold" sx={{ marginBottom: 1 }}>
+            <Typography variant="h6" fontWeight="bold" sx={{ marginBottom: 1, fontSize: { xs: '1.2rem', sm: '1.5rem' } }}>
               {item.level}
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
               <strong>Marks:</strong> {item.marks}
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
               <strong>Year of Passing:</strong> {item.year}
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
               <strong>Institution:</strong> {item.institution}
             </Typography>
           </Container>
